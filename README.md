@@ -1,40 +1,16 @@
 # ✈️ Operational Risk Analytics – Airline Flight Delays
 
-## 📌 Overview
+## 1. 📌 Overview
 
 This project applies data analytics and basic machine learning to analyze operational risk patterns in airline operations, with a focus on flight delays and cancellations.
 The objective is not to build a highly predictive model, but to identify risk hotspots across time and geography to support proactive operational decision-making.
 
-## 🎯 Business Context
+## 2. 🎯 Business Context
 
 Flight delays and cancellations do not occur randomly. They are influenced by temporal and geographic factors, and these patterns are often hidden when performance is evaluated only through aggregated KPIs such as overall on-time rates.
 This project demonstrates how data analytics can be used to surface localized operational risks and provide insights that are actionable for operations and management teams.
 
-## 🗂️ Repository Structure
-
-📦 operational-risk-analytics/
-│
-├── data/
-│   └── Datasource.csv              # Raw synthetic flight data
-│
-├── notebooks/
-│   └── Python.ipynb                # EDA, preprocessing, modeling
-│
-├── sql/
-│   ├── create_tables.sql           # Raw & ETL table schemas
-│   └── load_data.sql               # Transformation & enrichment logic
-│
-├── powerbi/
-│   └── Dashboard.pbix              # Power BI dashboard (SQL source)
-│
-├── docs/
-│   └── architecture.png            # Data pipeline diagram
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-
-## 🧩 Data Layers
+## 3. 🧩 Data Layers
 
 The data pipeline is organized into three logical layers:
 | Layer              | Description                            |
@@ -43,9 +19,9 @@ The data pipeline is organized into three logical layers:
 | **A’ – ETL**       | Cleaned and enriched data for analysis |
 | **A’’ – Insights** | Analytical outputs and model results   |
 
-## 🔄 Analytics Workflow
+## 4. 🔄 Analytics Workflow
 
-### 1. Data Ingestion (SQL – Raw Layer)
+### 4.1. Data Ingestion (SQL – Raw Layer)
 
 - Raw CSV data is loaded into a SQL table
 
@@ -53,7 +29,7 @@ The data pipeline is organized into three logical layers:
 
 - Purpose: data traceability and auditability
 
-### 2. Data Transformation (SQL – ETL Layer)
+### 4.2. Data Transformation (SQL – ETL Layer)
 
 - Creation of structured analytical tables
 
@@ -61,7 +37,7 @@ The data pipeline is organized into three logical layers:
 
 - Output: analysis-ready dataset
 
-### 3. Exploratory Data Analysis (Python)
+### 4.3. Exploratory Data Analysis (Python)
 
 - The Python notebook performs:
 
@@ -73,7 +49,7 @@ The data pipeline is organized into three logical layers:
 
 Key EDA findings show that delay risk is not evenly distributed across continents and months.
 
-### 4. Modeling Approach
+### 4.4. Modeling Approach
 
 Several classification models were evaluated:
 
@@ -93,7 +69,7 @@ Logistic Regression was selected as the baseline due to:
 
 The model is used as a risk screening tool, not a deterministic predictor.
 
-### 5. Insight Delivery (Power BI)
+### 4.5. Insight Delivery (Power BI)
 
 - Model outputs and aggregated insights are visualized in Power BI
 
@@ -105,7 +81,7 @@ The model is used as a risk screening tool, not a deterministic predictor.
 
 - Power BI is used for visualization only; logic remains upstream
 
-## 📊 Key Insights
+## 5. 📊 Key Insights
 
 - Operational risk is unevenly distributed across regions and time periods
 
@@ -113,7 +89,7 @@ The model is used as a risk screening tool, not a deterministic predictor.
 
 - Analytics is more effective as a decision-support tool than a pure prediction engine in this context
 
-## 💼 Business Value
+## 6. 💼 Business Value
 
 - Early identification of operational risk hotspots
 
